@@ -127,10 +127,10 @@ workflow NeisseriaTypingWF {
   
         # Assembly - shovill outputs 
         File assembly_fasta = shovill.assembly_fasta
-        File? contigs_gfa = shovill.contigs_gfa
-        File? contigs_fastg = shovill.contigs_fastg
-        File? contigs_lastgraph = shovill.contigs_lastgraph
         String shovill_version = shovill.shovill_version
+        # File? contigs_gfa = shovill.contigs_gfa
+        # File? contigs_fastg = shovill.contigs_fastg
+        # File? contigs_lastgraph = shovill.contigs_lastgraph
         
         # Assembly QC - quast outputs
         File quast_report = quast.quast_report
@@ -142,10 +142,10 @@ workflow NeisseriaTypingWF {
            
         # Assembly QC - busco outputs
         String busco_version = busco.busco_version
+        File busco_report = busco.busco_report
         # String busco_docker = busco.busco_docker
         # String busco_database = busco.busco_database
         # String busco_results = busco.busco_results
-        File busco_report = busco.busco_report
 
         # Assembly QC - cg pipeline outputs
         File? cg_pipeline_report_raw = cg_pipeline_raw.cg_pipeline_report
