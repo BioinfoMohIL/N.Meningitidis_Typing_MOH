@@ -103,13 +103,13 @@ workflow NeisseriaTypingWF {
         
         # Read QC - FastQC outputs
         File read1_fastqc_html = fastqc.read1_fastqc_html
-        # File read1_fastqc_zip  = fastqc.read1_fastqc_zip
         File read2_fastqc_html = fastqc.read2_fastqc_html
+        String version = fastqc.version
+        # String fastqc_docker = fastqc.fastqc_docker
+        # File read1_fastqc_zip  = fastqc.read1_fastqc_zip
         # File read2_fastqc_zip  = fastqc.read2_fastqc_zip
         # Int read1_seq = fastqc.read1_seq
         # Int read2_seq = fastqc.read2_seq
-        # String version = fastqc.version
-        # String fastqc_docker = fastqc.fastqc_docker
 
         # Read QC - cg pipeline outputs
         Float? r1_mean_q_raw = cg_pipeline_raw.r1_mean_q
